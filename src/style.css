@@ -1,3 +1,7 @@
+:root {
+  --main-color: #00aced;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -10,7 +14,6 @@ ul {
   list-style: none;
 }
 
-/* Header */
 .header {
   display: flex;
   align-items: center;
@@ -20,30 +23,31 @@ ul {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.logo-link {
+.logo {
   display: flex;
-  align-items: center;
 }
 
-.logo-img {
+.logo__img {
   display: block;
+  width: 40px;
+  height: 40px;
 }
 
 /* Navigation */
-.nav-list {
+.nav__list {
   display: flex;
 }
 
-.nav-item {
+.nav__item {
   margin-right: 20px;
 }
 
-.nav-item:last-child {
+.nav__item:last-child {
   margin-right: 0;
 }
 
-/* Nav Links */
-.nav-link {
+/* Links */
+.nav__link {
   display: flex;
   align-items: center;
   height: 60px;
@@ -54,22 +58,21 @@ ul {
   text-transform: uppercase;
 }
 
-.nav-link:hover {
-  color: #00aced;
+.nav__link:hover {
+  color: var(--main-color);
 }
 
-/* Active State */
-.nav-link.is-active {
-  color: #00aced;
+.nav__link.is-active {
+  color: var(--main-color);
 }
 
-.nav-link.is-active::after {
+.nav__link.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   height: 4px;
-  background-color: #00aced;
+  background-color: var(--main-color);
   border-radius: 2px 2px 0 0;
 }
