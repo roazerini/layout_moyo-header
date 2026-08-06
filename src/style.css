@@ -1,78 +1,32 @@
 :root {
-  --main-color: #00aced;
+  --blue-color: #00aced;
 }
 
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
-ul {
+.nav-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 50px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+.nav-link:hover {
+  color: var(--blue-color);
 }
 
-.logo {
-  display: flex;
+.nav-link.is-active {
+  color: var(--blue-color);
 }
 
-.logo__img {
-  display: block;
-  width: 40px;
-  height: 40px;
-}
-
-/* Navigation */
-.nav__list {
-  display: flex;
-}
-
-.nav__item {
-  margin-right: 20px;
-}
-
-.nav__item:last-child {
-  margin-right: 0;
-}
-
-/* Links */
-.nav__link {
-  display: flex;
-  align-items: center;
-  height: 60px;
-  position: relative;
-  text-decoration: none;
-  color: #000;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-.nav__link:hover {
-  color: var(--main-color);
-}
-
-.nav__link.is-active {
-  color: var(--main-color);
-}
-
-.nav__link.is-active::after {
+.nav-link.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   height: 4px;
-  background-color: var(--main-color);
-  border-radius: 2px 2px 0 0;
+  background-color: var(--blue-color);
 }
