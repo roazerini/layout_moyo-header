@@ -4,24 +4,52 @@
 
 body {
   margin: 0;
+  font-weight: 500;
   font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
-.nav-list {
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.nav__list {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.nav-link:hover {
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  position: relative;
+  padding: 0;
+  color: #000;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav__link:hover {
   color: var(--blue-color);
 }
 
-.nav-link.is-active {
+.nav__link.is-active {
   color: var(--blue-color);
 }
 
-.nav-link.is-active::after {
+.nav__link.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
