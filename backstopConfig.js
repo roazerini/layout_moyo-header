@@ -12,11 +12,6 @@ const basic = {
 
 const config = {
   ...backstop,
-  engine: 'puppeteer',
-  engineOptions: {
-    args: ['--no-sandbox'],
-    executablePath: 'C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe',
-  },
   fileNameTemplate: '{scenarioLabel}_{viewportLabel}',
   onBeforeScript: 'puppet/onBefore.js',
   onReadyScript: 'puppet/onReady.js',
